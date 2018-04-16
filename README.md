@@ -4,21 +4,6 @@
 
 - Loads environment variables from hierarchy of .env files for Node.js projects.
 
-## Example
-
-```javascript
-const Mock = require('openapi-mockk')
-
-Mock(args.api).responses({
-  path,
-  operation,
-  response: '200',
-  content,
-}).then(mock => {
-  console.log(mock[path][operation].responses)
-})
-```
-
 ## License
 
 - Unlicense (~Public Domain)
