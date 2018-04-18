@@ -4,7 +4,7 @@ const mockFs = require('mock-fs')
 const dotenv = require('../lib/')
 
 
-test('basic test', t => {
+test('production test', t => {
   t.test('will use default hierarchy of files', t => {
     mockFs({
       '.env.production': 'test',
