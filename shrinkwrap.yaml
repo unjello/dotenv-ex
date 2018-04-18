@@ -2207,7 +2207,7 @@ packages:
     resolution:
       integrity: sha1-9pPymjFbUNmp2iZGp6ZkXJaYW2o=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   debug: ^3.1.0
