@@ -1,4 +1,4 @@
-[![Build Status][travis_badge]][travis_link] [![js-standard-style][js_standard_badge]][js_standard_link]
+[![npm version][npm_badge]][npm_link] [![Build Status][travis_badge]][travis_link] [![downloads][npm_dl_badge]][npm_dl_link] [![js-standard-style][js_standard_badge]][js_standard_link]
 
 # dotenv-ex
 
@@ -51,3 +51,7 @@ Keep in mind, that environment variables specified in the files, are case sensit
 [js_standard_link]:  https://github.com/feross/standard
 [travis_badge]: https://travis-ci.org/unjello/dotenv-ex.svg?branch=master
 [travis_link]:  https://travis-ci.org/unjello/dotenv-ex
+[npm_badge]: https://img.shields.io/npm/v/dotenv-ex.svg?style=flat-square
+[npm_link]:  https://npmjs.org/package/dotenv-ex
+[npm_dl_badge]: http://img.shields.io/npm/dm/dotenv-ex.svg?style=flat-square
+[npm_dl_link]: https://npmjs.org/package/dotenv-ex
