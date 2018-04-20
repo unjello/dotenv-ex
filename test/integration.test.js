@@ -4,8 +4,8 @@ const dotenv = require('../lib/')
 test('in real environment', t => {
   t.test('will load environment variables from dotenv files hierarchy', t => {
     // tap runs test in project directory. don't want to pollute it with test dotenv files
-    process.chdir('test/data');
-    
+    process.chdir('test/data')
+
     dotenv()
 
     t.plan(4)

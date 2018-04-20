@@ -4,7 +4,6 @@ const mockFs = require('mock-fs')
 process.env['NODE_ENV'] = 'test'
 const dotenv = require('../lib/')
 
-
 test('in test environment', t => {
   t.test('will not use .local files', t => {
     mockFs({

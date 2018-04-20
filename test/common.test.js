@@ -8,8 +8,8 @@ const filesToLoad = {
   '.env.local': 'test',
   '.env.different': 'test',
   '.env.different.local': 'test',
-  '.env.moar': 'test',
-};
+  '.env.moar': 'test'
+}
 
 test('in any environment', t => {
   t.test('will silently skip non-existing files', t => {
@@ -36,7 +36,7 @@ test('in any environment', t => {
 
   t.test('will only load list of specified files instead of default', t => {
     mockFs(filesToLoad)
-    const filesToExpect = ['.env.different', '.env.different.local', '.env.moar'];
+    const filesToExpect = ['.env.different', '.env.different.local', '.env.moar']
 
     const {calls, files} = mockRequire(() => dotenv({
       env: filesToExpect

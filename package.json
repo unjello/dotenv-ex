@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tap --no-cov test/**/*.test.js",
+    "lint": "standard | snazzy",
+    "lint-ci": "standard",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
