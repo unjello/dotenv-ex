@@ -9,8 +9,12 @@
     "lint-ci": "standard",
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
-    "precommit": "npm lint && npm test",
-    "prepush": "npm lint && npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test",
+    }
   },
   "repository": {
     "type": "git",
