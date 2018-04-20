@@ -4,7 +4,9 @@
   "description": "Loads environment variables from hierarchy of .env files for Node.js projects. ",
   "main": "index.js",
   "scripts": {
-    "test": "tap --no-cov test/**/*.test.js"
+    "test": "tap --no-cov test/**/*.test.js",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
