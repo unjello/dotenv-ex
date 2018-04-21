@@ -6,34 +6,13 @@
 
 ## How to use it?
 
-Use this somewhere possibly early in your program:
+Use this somewhere near the start of your program:
 
 ```javascript
 require('dotenv-ex')();
 ```
 
-this will load files based on `NODE_ENV`. If it's not set, `production` is used as default. The files are loaded in following order:
-
-1. `.env.production.local`, `.env.development.local`
-1. `.env.production`, `.env.development`, `.env.test`
-1. `.env.local`
-1. `.env`
-
-`.env.local` is not used in `test` environment, as well as there is no `.env.test.local`. This is because, I believe tests should not be specific to local environment, and should work for everyone working on the module, in the very same, reproducible way.
-
-You can also override default files, by specifying only one file to load:
-
-```javascript
-require('dotenv-ex')({env: '.env.one'})
-```
-
-or your own list of files:
-
-```javascript
-require('dotenv-ex')({env: ['.env.one', '.env.moar']})
-```
-
-Keep in mind, that environment variables specified in the files, are case sensitive.
+for more information on how to use it, and more, check out [documentation](https://cdn.rawgit.com/unjello/dotenv-ex/1653050a/docs/module-dotenv-ex.html).
 
 ## License
 
