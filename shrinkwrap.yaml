@@ -3,7 +3,8 @@ dependencies:
   dotenv: 5.0.1
   dotenv-expand: 4.2.0
 devDependencies:
-  husky: 0.14.3
+  docdash: 0.4.0
+  husky: 1.0.0-rc.1
   mock-fs: 4.4.2
   mock-require: 3.0.2
   snazzy: 7.1.1
@@ -327,6 +328,17 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cosmiconfig/4.0.0:
+    dependencies:
+      is-directory: 0.3.1
+      js-yaml: 3.11.0
+      parse-json: 4.0.0
+      require-from-string: 2.0.2
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-6e5vDdrXZD+t5v0L8CrurPeybg4Fmf+FCSYxXKYVAqLUtyCSbuyqE059d0kDthTNRzKVjL7QMgNpEUlsoYH3iQ==
   /coveralls/3.0.0:
     dependencies:
       js-yaml: 3.11.0
@@ -437,6 +449,10 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha1-fyjS657nsVqX79ic5j3P2qPMur8=
+  /docdash/0.4.0:
+    dev: true
+    resolution:
+      integrity: sha1-BcOlDYMYmYFpnuDAdtOjlQ237AA=
   /doctrine/1.5.0:
     dependencies:
       esutils: 2.0.2
@@ -727,6 +743,20 @@ packages:
     dev: true
     resolution:
       integrity: sha1-LUH1Y+H+QA7Uli/hpNXGp1Od9/Y=
+  /execa/0.9.0:
+    dependencies:
+      cross-spawn: 5.1.0
+      get-stream: 3.0.0
+      is-stream: 1.1.0
+      npm-run-path: 2.0.2
+      p-finally: 1.0.0
+      signal-exit: 3.0.2
+      strip-eof: 1.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-BbUMBiX4hqiHZUA5+JujIjNb6TyAlp2D5KLheMjMluwOuzcnylDL4AxZYLLn1n2AGB49eSWwyKvvEQoRpnAtmA==
   /extend/3.0.1:
     dev: true
     resolution:
@@ -881,6 +911,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
+  /get-stream/3.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
   /getpass/0.1.7:
     dependencies:
       assert-plus: 1.0.0
@@ -994,17 +1030,20 @@ packages:
       npm: '>=1.3.7'
     resolution:
       integrity: sha1-muzZJRFHcvPZW2WmCruPfBj7rOE=
-  /husky/0.14.3:
+  /husky/1.0.0-rc.1:
     dependencies:
+      cosmiconfig: 4.0.0
+      execa: 0.9.0
       is-ci: 1.1.0
-      normalize-path: 1.0.0
-      strip-indent: 2.0.0
+      pkg-dir: 2.0.0
+      pupa: 1.0.0
+      read-pkg: 3.0.0
+      run-node: 0.2.0
+      slash: 2.0.0
     dev: true
-    engines:
-      node: '>=4'
     requiresBuild: true
     resolution:
-      integrity: sha512-e21wivqHpstpoiWA/Yi8eFti8E+sQDSS53cpJsPptPs295QTOQR0ZwnHo2TXy1XOpZFD9rPOd3NpmqTK6uMLJA==
+      integrity: sha512-NwMe/yU/C0jbRXH7DBTEDNPytnFADfnh4cdbOPm/1dXKKSaq32VGzFYDCewvCwJlkHMgLh/hPy+w3kg4i0Z7qw==
   /iconv-lite/0.4.21:
     dependencies:
       safer-buffer: 2.1.2
@@ -1083,6 +1122,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha1-mqIOtq7rv/d/vTPnTKAbM1gdOhY=
+  /is-directory/0.3.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
   /is-fullwidth-code-point/2.0.0:
     dev: true
     engines:
@@ -1371,12 +1416,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9jjUFbTPfEy3R/ad/2oNbKtW9Hgovl5O1FvFWKkKblNXoN/Oou6+9+KKohPK13Yc3/TyunyWhJp6gvRNR/PPAw==
-  /normalize-path/1.0.0:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-MtDkcvkf80VwHBWoMRAY07CpA3k=
   /normalize-path/2.1.1:
     dependencies:
       remove-trailing-separator: 1.1.0
@@ -1385,6 +1424,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-GrKLVW4Zg2Oowab35vogE3/mrtk=
+  /npm-run-path/2.0.2:
+    dependencies:
+      path-key: 2.0.1
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=
   /nyc/11.6.0:
     bundledDependencies:
       - archy
@@ -1486,6 +1533,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Tod/vtqaLsgAD7wLyuOWRe6L+Nw=
+  /p-finally/1.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
   /p-limit/1.2.0:
     dependencies:
       p-try: 1.0.0
@@ -1549,6 +1602,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NlQX3t5EQw0cEa9hAn+s8HS9/FM=
+  /path-key/2.0.1:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
   /path-parse/1.0.5:
     dev: true
     resolution:
@@ -1561,6 +1620,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-8BLMuEFbcJb8LaoQVMPXI4lZTHM=
+  /path-type/3.0.0:
+    dependencies:
+      pify: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==
   /performance-now/2.1.0:
     dev: true
     resolution:
@@ -1618,6 +1685,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-ektQio1bstYp1EcFb/TpyTFM89Q=
+  /pkg-dir/2.0.0:
+    dependencies:
+      find-up: 2.1.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-9tXREJ4Z1j7fQo4L1X4Sd3YVM0s=
   /pluralize/7.0.0:
     dev: true
     engines:
@@ -1662,6 +1737,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-wNWmOycYgArY4esPpSachN1BhF4=
+  /pupa/1.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-mpVopa9+ZXuEYqbp1TKHQ1YM7/Y=
   /qs/6.5.1:
     dev: true
     engines:
@@ -1687,6 +1768,16 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-jvHAYjxqbbDcZxPEv6xGMysjaPg=
+  /read-pkg/3.0.0:
+    dependencies:
+      load-json-file: 4.0.0
+      normalize-package-data: 2.4.0
+      path-type: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-nLxoaXj+5l0WwA4rGcI3/Pbjg4k=
   /readable-stream/2.3.6:
     dependencies:
       core-util-is: 1.0.2
@@ -1732,6 +1823,12 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-8H7Ehijd4js+s6wuVPLjwORxD4zeuyjYugprdOXlPSqaApmL/QOy+EB/beICHVCHkGMKNh5rvihb5ov+IDw4mg==
+  /require-from-string/2.0.2:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
   /require-uncached/1.0.3:
     dependencies:
       caller-path: 0.1.0
@@ -1776,6 +1873,12 @@ packages:
       node: '>=0.12.0'
     resolution:
       integrity: sha1-A3GrSuC91yDUFm19/aZP96RFpsA=
+  /run-node/0.2.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-Zsnxrr+CMGfm7VFuCj96E8tOpFHTEuZS9EvlXcKapVr2RUvr+fxTMxNgK5fXi3TprSgWoxobtR/3TXZT4na/Ng==
   /run-parallel/1.1.8:
     dev: true
     resolution:
@@ -1824,6 +1927,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+  /slash/2.0.0:
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
   /slice-ansi/1.0.0:
     dependencies:
       is-fullwidth-code-point: 2.0.0
@@ -1984,12 +2093,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
-  /strip-indent/2.0.0:
+  /strip-eof/1.0.0:
     dev: true
     engines:
-      node: '>=4'
+      node: '>=0.10.0'
     resolution:
-      integrity: sha1-XvjbKV0B5u1sv3qrlpmNeCJSe2g=
+      integrity: sha1-u0P/VZim6wXYm1n80SnJgzE2Br8=
   /strip-json-comments/2.0.1:
     dev: true
     engines:
@@ -2245,9 +2354,10 @@ shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   debug: ^3.1.0
+  docdash: ^0.4.0
   dotenv: ^5.0.1
   dotenv-expand: ^4.2.0
-  husky: ^0.14.3
+  husky: ^1.0.0-rc.1
   mock-fs: ^4.4.2
   mock-require: ^3.0.2
   snazzy: ^7.1.1

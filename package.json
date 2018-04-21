@@ -8,13 +8,19 @@
     "lint": "standard | snazzy",
     "lint-ci": "standard",
     "preversion": "npm test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "generate-docs": "jsdoc -c jsdoc.json"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm test",
       "pre-push": "npm run lint && npm test"
     }
+  },
+  "standard": {
+    "ignore": [
+      "docs/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -31,6 +37,7 @@
     "dotenv-expand": "^4.2.0"
   },
   "devDependencies": {
+    "docdash": "^0.4.0",
     "husky": "^1.0.0-rc.1",
     "mock-fs": "^4.4.2",
     "mock-require": "^3.0.2",
